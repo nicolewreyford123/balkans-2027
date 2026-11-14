@@ -16,9 +16,9 @@
   <div class="bar-in">
     <a class="mark" href="index.html"><b>Balkans 2027</b><span>Five countries in play</span></a>
     <nav class="nav">
-      <a href="things-to-do.html">Field notes</a>
-      <a href="Balkans-2027-itinerary.html">Itinerary</a>
-      <a href="https://maps.app.goo.gl/JvVEqDxnpzLgJpACA" target="_blank" rel="noopener">Map list</a>
+      <a class="nav-notes" href="things-to-do.html">Field notes</a>
+      <a class="nav-itin" href="Balkans-2027-itinerary.html">Itinerary</a>
+      <a class="nav-map" href="https://maps.app.goo.gl/JvVEqDxnpzLgJpACA" target="_blank" rel="noopener">Map list</a>
     </nav>
   </div>
 </header>
@@ -26,8 +26,8 @@
 <main id="main" class="sheet">
 
   <figure class="plate hero-plate">
-    <div class="frame"><img src="photos/Slovenia/bled-island-morning.jpg" alt="Lake Bled's island church across calm water, a swimmer out in the lake"></div>
-    <figcaption><b>Plate F·1.</b> The view at the end of the paperwork — Bled's island on a quiet morning, someone already swimming. Photograph via <a href="https://unsplash.com/" target="_blank" rel="noopener">Unsplash</a> — free licence, source &amp; author at the link.</figcaption>
+    <div class="frame"><img title="Photograph via Unsplash — free licence, source &amp; author at unsplash.com" data-credit="https://unsplash.com/" src="photos/budva and sveti stefan/sveti-stefan-golden.jpg" alt="Sveti Stefan island joined to the mainland by its sandy causeway at golden hour"></div>
+    <figcaption><b>Plate F·1.</b> Sveti Stefan at golden hour.</figcaption>
   </figure>
 
   <header class="hero">
@@ -62,8 +62,39 @@
 
   <section class="sec story">
     <h2 class="h2">Flights</h2>
-    <p>There are <strong>no direct flights from South Africa to Ljubljana</strong>. The gateway is <strong>Jože Pučnik Airport (LJU)</strong>, linked to the city by a frequent airport bus. The realistic one-stop routes run via <strong>Istanbul</strong>, <strong>Doha</strong>, or a European hub — Frankfurt, Vienna, Munich or Zurich — and the two decks carry working numbers of <strong>R8,276</strong> return (the 7-day plan's find) and <strong>R12,000</strong> budgeted (the 10-day plan's line item). Both figures predate 2027; price the real thing before trusting either.</p>
-    <p>Two alternative gateways are worth pricing before we commit, because they often come in cheaper: fly to <strong>Venice</strong> or <strong>Trieste</strong> and bus it to Ljubljana (roughly 1½–2½ hours), or into <strong>Zagreb</strong> and do the same (about two hours). The same trick works in reverse for the current plan — <strong>Split (SPU) in, Tirana (TIA) out</strong> stays the open-jaw shape of the existing itinerary, and it doesn't require a single new airport decision until the country is chosen.</p>
+    <p>None of the five candidate countries has a direct flight from South Africa. Every gateway is one-stop — via <strong>Istanbul</strong>, <strong>Doha</strong>, or a European hub like <strong>Frankfurt, Vienna, Munich or Zurich</strong> — and the two decks carry working numbers of <strong>R8,276</strong> return (the 7-day plan's find) and <strong>R12,000</strong> budgeted (the 10-day plan's line item). Both figures predate 2027; price the real thing before trusting either.</p>
+    <p class="lab head">Working return fares, JNB or CPT to the gateways</p>
+    <table class="ll">
+      <thead><tr><th>Gateway</th><th>Serves</th><th>Working return fare</th><th class="desc">Pattern to verify</th></tr></thead>
+      <tbody>
+        <tr><td class="nm"><b>Tirana (TIA)</b><small>Albania</small></td><td>Albania, plus the coast via bus</td><td>R9,000–R14,000</td><td class="desc">Often the cheapest gateway in the region — Turkish and the Gulf carriers compete hard for it.</td></tr>
+        <tr><td class="nm"><b>Sarajevo (SJJ)</b><small>Bosnia &amp; Herzegovina</small></td><td>Bosnia deck combos, in-and-out</td><td>R9,500–R14,500</td><td class="desc">One-stop via Istanbul or Vienna; thin route list, but the fares stay honest.</td></tr>
+        <tr><td class="nm"><b>Podgorica (TGD)</b><small>Montenegro</small></td><td>Montenegro + Dubrovnik trick</td><td>R9,500–R14,500</td><td class="desc">Small airport, few routes — price it, but also price Dubrovnik and bus the 2 hours.</td></tr>
+        <tr><td class="nm"><b>Zagreb (ZAG)</b><small>Croatia</small></td><td>Any combo, most daily frequencies</td><td>R10,000–R15,000</td><td class="desc">The region's workhorse hub — most frequencies, usually mid-price.</td></tr>
+        <tr><td class="nm"><b>Ljubljana (LJU)</b><small>Slovenia</small></td><td>Slovenia deck combos</td><td>R10,500–R15,500</td><td class="desc">The Slovenia decks' gateway; Venice, Trieste or Zagreb plus a bus often beats it.</td></tr>
+        <tr><td class="nm"><b>Split (SPU)</b><small>Croatia</small></td><td>The southern combination, inbound</td><td>R10,500–R16,000</td><td class="desc">Seasonal route list — strong in late May, thin in winter. Our open-jaw entry airport.</td></tr>
+        <tr><td class="nm"><b>Dubrovnik (DBV)</b><small>Croatia</small></td><td>The southern combination, outbound</td><td>R11,000–R17,000</td><td class="desc">The prize every airline knows about — expect the highest fares on the list.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Every figure above is a working number from 2026 fare-watching, not a quote.</strong> Return fares swing by season, by booking window, and by how evil the connection is. Re-price each gateway when the country decision is near; the cheapest airport can change a combination's maths by thousands of rand.</p>
+    <p>Two alternative gateways are worth pricing before we commit, because they often come in cheaper: fly to <strong>Venice</strong> or <strong>Trieste</strong> and bus it to Ljubljana (roughly 1½–2½ hours), or into <strong>Zagreb</strong> and do the same (about two hours). And <strong>Split (SPU) in, Tirana (TIA) out</strong> stays the open-jaw shape of the existing itinerary — it doesn't require a single new airport decision until the country is chosen.</p>
+  </section>
+
+  <section class="sec story">
+    <h2 class="h2">The local-flight fallback</h2>
+    <p>The standing plan is surface travel — buses, ferries and trains — because the candidate countries chain along shared borders. But two things can break that: a combination that <em>skips</em> a country (Slovenia + Albania means a 14-hour-plus surface slog between the two ends), and repositioning to the open-jaw exit airport when the bus map says no. That's when a one-hour hop earns its keep. Working one-way figures:</p>
+    <table class="ll">
+      <thead><tr><th>Route</th><th>Working one-way fare</th><th class="desc">Pattern to verify</th></tr></thead>
+      <tbody>
+        <tr><td class="nm"><b>Ljubljana → Tirana</b></td><td>€130–230</td><td class="desc">Rarely nonstop; usually one change at Vienna or Belgrade. The Slovenia-plus-Albania escape hatch.</td></tr>
+        <tr><td class="nm"><b>Zagreb → Tirana</b></td><td>€100–180</td><td class="desc">Watch for seasonal low-cost direct; one-stop is the fallback.</td></tr>
+        <tr><td class="nm"><b>Dubrovnik → Sarajevo</b></td><td>€80–150</td><td class="desc">Thin schedule and the airport is far from town; the bus is about 4 hours but mountainous.</td></tr>
+        <tr><td class="nm"><b>Split → Zagreb</b></td><td>€50–100</td><td class="desc">An hour in the air against 5+ by road — useful when the exit airport is Zagreb.</td></tr>
+        <tr><td class="nm"><b>Podgorica → Tirana</b></td><td>€60–120</td><td class="desc">A short hop over the mountains between two low-cost bases; often cheaper than it looks.</td></tr>
+        <tr><td class="nm"><b>Sarajevo → Podgorica</b></td><td>€80–140</td><td class="desc">Direct flights are rare — the route usually goes via Belgrade, and the bus usually wins.</td></tr>
+      </tbody>
+    </table>
+    <p class="sig"><strong>Rule of thumb:</strong> a local flight only wins when it saves a full day, not just hours. Otherwise the bus or ferry stays the default — cheaper, and it drops us in the middle of town instead of an hour out of it.<small>Field note · Balkans 2027</small></p>
   </section>
 
   <section class="sec story">
