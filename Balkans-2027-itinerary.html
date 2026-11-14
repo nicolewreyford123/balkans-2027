@@ -95,7 +95,7 @@
   <section class="sec">
     <h2>Every main city, on a map</h2>
     <figure class="map-frame">
-      <svg class="route-svg" viewBox="0 0 960 830" role="img" aria-label="Stylized map of the Balkans: every main stop numbered and clickable across the five candidate countries, with day-trip branches, country borders, and Slovenia in the top-left as a candidate">
+      <svg class="route-svg" viewBox="0 0 960 830" role="img" aria-label="Stylized map of the Balkans: every main stop numbered and clickable across all five countries — blue dots for cities and towns, red dots for sites and places to see — with day-trip branches and country borders">
         <defs>
           <linearGradient id="seaGrad" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0" stop-color="#bdd8e5"/>
@@ -192,16 +192,13 @@
           <path d="M 160 0 C 148 30, 122 54, 92 76 C 60 90, 30 98, 0 102"/>
         </g>
         <text x="150" y="42" text-anchor="middle" class="border-flag" style="font-size:12px;">SI · HR</text>
-        <a href="slovenia.html">
-          <text x="10" y="40" transform="rotate(-18 10 40)" class="country-label" style="font-size:15px;">SLOVENIA</text>
-          <text x="12" y="58" transform="rotate(-18 12 58)" style="font-size:10px;fill:#b3206f;font-weight:700;letter-spacing:.28em;">CANDIDATE</text>
-        </a>
+        <text x="10" y="40" transform="rotate(-18 10 40)" class="country-label" style="font-size:15px;">SLOVENIA</text>
 
         <!-- Slovenia candidate route (dashed, open decision) -->
-        <g stroke="#ffffff" stroke-width="6" fill="none" opacity="0.85" stroke-linecap="round">
+        <g stroke="#ffffff" stroke-width="7" fill="none" opacity="0.85" stroke-linecap="round">
           <path d="M 100 22 L 118 58 L 34 92"/>
         </g>
-        <g stroke="#8a7444" stroke-width="3" fill="none" stroke-dasharray="7 7" stroke-linecap="round">
+        <g stroke="#b3206f" stroke-width="3" fill="none" stroke-dasharray="7 7" stroke-linecap="round">
           <path d="M 100 22 L 118 58 L 34 92"/>
         </g>
 
@@ -264,28 +261,28 @@
 
         <!-- Day trips & deck stops (clickable, numbered to match the field-notes index) -->
         <g class="dots">
-          <a href="plitvice.html"><circle class="dot-core" cx="300" cy="70" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="300" y="74" text-anchor="middle" class="tnum">3</text><text x="314" y="74" class="dot-label">Plitvice</text></a>
-          <a href="zagreb.html"><circle class="dot-core" cx="330" cy="25" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="330" y="29" text-anchor="middle" class="tnum">24</text><text x="344" y="29" class="dot-label">Zagreb</text></a>
-          <a href="mostar.html"><circle class="dot-core" cx="449" cy="276" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="449" y="280" text-anchor="middle" class="tnum">4</text><text x="463" y="280" class="dot-label">Mostar</text></a>
-          <a href="sarajevo.html"><circle class="dot-core" cx="528" cy="196" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="528" y="200" text-anchor="middle" class="tnum">20</text><text x="542" y="200" class="dot-label">Sarajevo</text></a>
-          <a href="jajce.html"><circle class="dot-core" cx="442" cy="118" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="442" y="122" text-anchor="middle" class="tnum">21</text><text x="456" y="122" class="dot-label">Jajce</text></a>
-          <a href="lovcen.html"><circle class="dot-core" cx="600" cy="388" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="600" y="392" text-anchor="middle" class="tnum">7</text><text x="600" y="376" text-anchor="middle" class="dot-label">Lovćen</text></a>
-          <a href="durmitor.html"><circle class="dot-core" cx="672" cy="304" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="672" y="308" text-anchor="middle" class="tnum">8</text><text x="686" y="308" class="dot-label">Durmitor</text></a>
-          <a href="budva-riviera.html"><ellipse cx="652" cy="458" rx="7" ry="3" transform="rotate(-20 652 458)" fill="#a9cbdc" stroke="#fff" stroke-width="1.5"/><circle class="dot-core" cx="646" cy="450" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="646" y="454" text-anchor="middle" class="tnum">5</text><text x="632" y="471" text-anchor="end" class="dot-label">Sveti Stefan</text></a>
-          <a href="skadar.html"><circle class="dot-core" cx="698" cy="446" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="698" y="450" text-anchor="middle" class="tnum">9</text><text x="688" y="438" text-anchor="end" class="dot-label">Virpazar</text></a>
-          <a href="koman.html"><circle class="dot-core" cx="818" cy="414" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="818" y="418" text-anchor="middle" class="tnum">11</text><text x="830" y="418" class="dot-label">Komani L.</text></a>
-          <a href="kruje-bovilla.html"><circle class="dot-core" cx="803" cy="562" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="803" y="566" text-anchor="middle" class="tnum">12</text><text x="817" y="566" class="dot-label">Krujë &amp; Bovilla</text></a>
-          <a href="himare.html"><circle class="dot-core" cx="781" cy="766" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="781" y="770" text-anchor="middle" class="tnum">15</text><text x="781" y="752" text-anchor="middle" class="dot-label">Himarë</text></a>
-          <a href="gjirokaster.html"><circle class="dot-core" cx="849" cy="770" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="849" y="774" text-anchor="middle" class="tnum">16</text><text x="863" y="774" class="dot-label">Gjirokastër</text></a>
-          <a href="dhermi.html"><circle class="dot-core" cx="745" cy="706" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="745" y="710" text-anchor="middle" class="tnum">22</text><text x="731" y="710" text-anchor="end" class="dot-label">Dhërmi</text></a>
-          <a href="ksamil.html"><circle class="dot-core" cx="804" cy="782" r="10" fill="#16324a" stroke="#fff" stroke-width="2.5"/><text x="804" y="786" text-anchor="middle" class="tnum">23</text><text x="804" y="806" text-anchor="middle" class="dot-label">Ksamil &amp; Sarandë</text></a>
+          <a href="plitvice.html"><circle class="dot-core" cx="300" cy="70" r="10" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="300" y="74" text-anchor="middle" class="tnum">3</text><text x="314" y="74" class="dot-label">Plitvice</text></a>
+          <a href="zagreb.html"><circle cx="330" cy="25" r="14" fill="#fff"/><circle class="stop-core" cx="330" cy="25" r="12" fill="#16324a"/><text x="330" y="29" text-anchor="middle" style="font-size:12px;font-weight:700" fill="#fff">24</text><text x="344" y="29" class="dot-label">Zagreb</text></a>
+          <a href="mostar.html"><circle cx="449" cy="276" r="14" fill="#fff"/><circle class="stop-core" cx="449" cy="276" r="12" fill="#16324a"/><text x="449" y="280" text-anchor="middle" style="font-size:12px;font-weight:700" fill="#fff">4</text><text x="463" y="280" class="dot-label">Mostar</text></a>
+          <a href="sarajevo.html"><circle cx="528" cy="196" r="14" fill="#fff"/><circle class="stop-core" cx="528" cy="196" r="12" fill="#16324a"/><text x="528" y="200" text-anchor="middle" style="font-size:12px;font-weight:700" fill="#fff">20</text><text x="542" y="200" class="dot-label">Sarajevo</text></a>
+          <a href="jajce.html"><circle cx="442" cy="118" r="14" fill="#fff"/><circle class="stop-core" cx="442" cy="118" r="12" fill="#16324a"/><text x="442" y="122" text-anchor="middle" style="font-size:12px;font-weight:700" fill="#fff">21</text><text x="456" y="122" class="dot-label">Jajce</text></a>
+          <a href="lovcen.html"><circle class="dot-core" cx="600" cy="388" r="10" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="600" y="392" text-anchor="middle" class="tnum">7</text><text x="600" y="376" text-anchor="middle" class="dot-label">Lovćen</text></a>
+          <a href="durmitor.html"><circle class="dot-core" cx="672" cy="304" r="10" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="672" y="308" text-anchor="middle" class="tnum">8</text><text x="686" y="308" class="dot-label">Durmitor</text></a>
+          <a href="budva-riviera.html"><ellipse cx="652" cy="458" rx="7" ry="3" transform="rotate(-20 652 458)" fill="#a9cbdc" stroke="#fff" stroke-width="1.5"/><circle class="dot-core" cx="646" cy="450" r="10" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="646" y="454" text-anchor="middle" class="tnum">5</text><text x="632" y="471" text-anchor="end" class="dot-label">Sveti Stefan</text></a>
+          <a href="skadar.html"><circle class="dot-core" cx="698" cy="446" r="10" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="698" y="450" text-anchor="middle" class="tnum">9</text><text x="688" y="438" text-anchor="end" class="dot-label">Virpazar</text></a>
+          <a href="koman.html"><circle class="dot-core" cx="818" cy="414" r="10" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="818" y="418" text-anchor="middle" class="tnum">11</text><text x="830" y="418" class="dot-label">Komani L.</text></a>
+          <a href="kruje-bovilla.html"><circle class="dot-core" cx="803" cy="562" r="10" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="803" y="566" text-anchor="middle" class="tnum">12</text><text x="817" y="566" class="dot-label">Krujë &amp; Bovilla</text></a>
+          <a href="himare.html"><circle cx="781" cy="766" r="14" fill="#fff"/><circle class="stop-core" cx="781" cy="766" r="12" fill="#16324a"/><text x="781" y="770" text-anchor="middle" style="font-size:12px;font-weight:700" fill="#fff">15</text><text x="781" y="752" text-anchor="middle" class="dot-label">Himarë</text></a>
+          <a href="gjirokaster.html"><circle cx="849" cy="770" r="14" fill="#fff"/><circle class="stop-core" cx="849" cy="770" r="12" fill="#16324a"/><text x="849" y="774" text-anchor="middle" style="font-size:12px;font-weight:700" fill="#fff">16</text><text x="863" y="774" class="dot-label">Gjirokastër</text></a>
+          <a href="dhermi.html"><circle class="dot-core" cx="745" cy="706" r="10" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="745" y="710" text-anchor="middle" class="tnum">22</text><text x="731" y="710" text-anchor="end" class="dot-label">Dhërmi</text></a>
+          <a href="ksamil.html"><circle cx="804" cy="782" r="14" fill="#fff"/><circle class="stop-core" cx="804" cy="782" r="12" fill="#16324a"/><text x="804" y="786" text-anchor="middle" style="font-size:12px;font-weight:700" fill="#fff">23</text><text x="804" y="806" text-anchor="middle" class="dot-label">Ksamil &amp; Sarandë</text></a>
         </g>
 
-        <!-- Slovenia candidate stops (gold, numbered) -->
+        <!-- More main stops (numbered, same system as the rest) -->
         <g class="dots">
-          <a href="ljubljana.html"><circle class="dot-core" cx="118" cy="58" r="9" fill="#8a7444" stroke="#fff" stroke-width="2.5"/><text x="118" y="62" text-anchor="middle" class="tnum">17</text><text x="131" y="62" class="dot-label" style="font-size:12px;">Ljubljana</text></a>
-          <a href="bled-bohinj.html"><circle class="dot-core" cx="100" cy="22" r="9" fill="#8a7444" stroke="#fff" stroke-width="2.5"/><text x="100" y="26" text-anchor="middle" class="tnum">18</text><text x="113" y="26" class="dot-label" style="font-size:12px;">Bled &amp; Bohinj</text></a>
-          <a href="piran.html"><circle class="dot-core" cx="34" cy="92" r="9" fill="#8a7444" stroke="#fff" stroke-width="2.5"/><text x="34" y="96" text-anchor="middle" class="tnum">19</text><text x="46" y="96" class="dot-label" style="font-size:12px;">Piran</text></a>
+          <a href="ljubljana.html"><circle cx="118" cy="58" r="14" fill="#fff"/><circle class="stop-core" cx="118" cy="58" r="12" fill="#16324a"/><text x="118" y="62" text-anchor="middle" style="font-size:12px;font-weight:700" fill="#fff">17</text><text x="134" y="62" class="dot-label" style="font-size:12px;">Ljubljana</text></a>
+          <a href="bled-bohinj.html"><circle class="dot-core" cx="100" cy="22" r="9" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="100" y="26" text-anchor="middle" class="tnum">18</text><text x="113" y="26" class="dot-label" style="font-size:12px;">Bled &amp; Bohinj</text></a>
+          <a href="piran.html"><circle cx="34" cy="92" r="14" fill="#fff"/><circle class="stop-core" cx="34" cy="92" r="12" fill="#16324a"/><text x="34" y="96" text-anchor="middle" style="font-size:12px;font-weight:700" fill="#fff">19</text><text x="46" y="96" class="dot-label" style="font-size:12px;">Piran</text></a>
         </g>
 
         <!-- Overnight stops (clickable, numbered) -->
@@ -298,14 +295,13 @@
           <a href="berat.html"><circle cx="816" cy="675" r="14" fill="#fff"/><circle class="stop-core" cx="816" cy="675" r="12" fill="#16324a"/><text x="816" y="679" text-anchor="middle">14</text><text x="833" y="679" class="place-label">Berat</text></a>
         </g>
       </svg>
-      <figcaption>Schematic chart — geography by feel rather than by surveyor, but tightened toward the real thing: the bay winds, the lake sits east of Shkodër. Every main city and day stop is numbered to match the field-notes index, and every numbered circle is clickable and opens its field-notes page. Gold marks Slovenia's candidate stops — an open option.</figcaption>
+      <figcaption>Schematic chart — geography by feel rather than by surveyor, but tightened toward the real thing: the bay winds, the lake sits east of Shkodër. Every main city and site is numbered to match the field-notes index, and every circle is clickable and opens its field-notes page. Blue circles are cities and towns; red circles are sites and places to see.</figcaption>
     </figure>
     <div class="map-legend">
-      <span class="key"><span class="k-num">n</span> Every main stop — numbered, click for its page</span>
+      <span class="key"><span class="k-num">n</span> Cities &amp; towns — numbered, click for its page</span>
+      <span class="key"><span class="k-num k-num2">n</span> Sites &amp; places to see — numbered, click for its page</span>
       <span class="key"><span class="k-line k-dash"></span> Day-trip branch</span>
       <span class="key"><span class="k-line k-bd"></span> Country border</span>
-      <span class="key"><span class="k-line k-si"></span> Slovenia candidate route</span>
-      <span class="key"><span class="k-num k-snum">n</span> Slovenia candidate stop — numbered, open decision</span>
     </div>
     <div class="todo-row">
       <a href="split.html">1 · Split</a>
@@ -329,13 +325,13 @@
       <a href="dhermi.html">22 · Dhërmi</a>
       <a href="ksamil.html">23 · Ksamil</a>
       <a href="zagreb.html">24 · Zagreb</a>
-      <a href="slovenia.html">Slovenia — candidate:</a>
+      <a href="slovenia.html">Slovenia:</a>
       <a href="ljubljana.html">17 · Ljubljana</a>
       <a href="bled-bohinj.html">18 · Bled &amp; Bohinj</a>
       <a href="piran.html">19 · Piran &amp; the coast</a>
     </div>
     <div class="callout">
-      <strong>Every numbered circle on the chart is clickable</strong> — every main city and day stop opens its field-notes page (all pinned from the shared <a href="https://maps.app.goo.gl/JvVEqDxnpzLgJpACA" target="_blank" rel="noopener">"Balkans" Google Maps list</a> or built from the decks in the trip folder), and each country has its own page holding all its places. The gold circles top-left are Slovenia's — an open option, not a decision.
+      <strong>Every numbered circle on the chart is clickable</strong> — every main city and day stop opens its field-notes page (all pinned from the shared <a href="https://maps.app.goo.gl/JvVEqDxnpzLgJpACA" target="_blank" rel="noopener">"Balkans" Google Maps list</a> or built from the decks in the trip folder), and each country has its own page holding all its places. Blue circles mark cities and towns; red circles mark sites and places to see.
     </div>
   </section>
 
