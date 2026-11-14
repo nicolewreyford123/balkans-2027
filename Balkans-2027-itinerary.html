@@ -29,6 +29,8 @@
 .k-hr{border-color:#3a576d}.k-me{border-color:#8a7444}.k-al{border-color:#12293d}
 .k-dash{border-top:3px dashed var(--light)}
 .k-bd{border-top:2px dashed var(--ink)}
+.k-si{border-top:3px dashed #8a7444}
+.k-sdot{width:.9em;height:.9em;border-radius:50%;background:#8a7444;border:2px solid #fff;box-shadow:0 0 0 1px var(--rule)}
 
 /* the navy day-by-day panel */
 .deep .day{border-top-color:rgba(226,238,247,.2)}
@@ -45,7 +47,7 @@
 
 <header class="bar">
   <div class="bar-in">
-    <a class="mark" href="Balkans-2027-itinerary.html"><b>Balkans 2027</b><span>Five countries in play</span></a>
+    <a class="mark" href="index.html"><b>Balkans 2027</b><span>Five countries in play</span></a>
     <nav class="nav">
       <a href="things-to-do.html">Field notes</a>
       <a href="Balkans-2027-itinerary.html" aria-current="page">Itinerary</a>
@@ -84,7 +86,7 @@
   <section class="sec">
     <h2>The route, on a map</h2>
     <figure class="map-frame">
-      <svg class="route-svg" viewBox="0 0 960 830" role="img" aria-label="Stylized route map from Split to Berat, with clickable stops and day trips">
+      <svg class="route-svg" viewBox="0 0 960 830" role="img" aria-label="Stylized route map from Split to Berat with clickable stops and day trips, plus Slovenia shown in the top-left corner as a candidate country">
         <defs>
           <linearGradient id="seaGrad" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0" stop-color="#bdd8e5"/>
@@ -170,6 +172,36 @@
         <text x="600" y="360" transform="rotate(-12 600 360)" class="country-label" style="font-size:22px;">MONTENEGRO</text>
         <text x="868" y="600" transform="rotate(72 868 600)" class="country-label" style="font-size:24px;">ALBANIA</text>
         <text x="470" y="330" transform="rotate(24 470 330)" class="country-label" style="font-size:17px;">BOSNIA</text>
+
+        <!-- Slovenia — candidate country (top-left corner) -->
+        <path fill="url(#landGrad)" stroke="#16324a" stroke-width="1.5" stroke-opacity="0.55" d="
+          M 0 0 L 160 0
+          C 148 30, 122 54, 92 76
+          C 60 90, 30 98, 0 102 Z"/>
+        <g stroke="#ffffff" stroke-width="6" fill="none" opacity="0.85" stroke-linejoin="round">
+          <path d="M 160 0 C 148 30, 122 54, 92 76 C 60 90, 30 98, 0 102"/>
+        </g>
+        <g stroke="#16324a" stroke-width="2" fill="none" stroke-dasharray="6 5" opacity="0.6" stroke-linejoin="round">
+          <path d="M 160 0 C 148 30, 122 54, 92 76 C 60 90, 30 98, 0 102"/>
+        </g>
+        <text x="150" y="42" text-anchor="middle" class="border-flag" style="font-size:12px;">SI · HR</text>
+        <a href="slovenia.html">
+          <text x="10" y="40" transform="rotate(-18 10 40)" class="country-label" style="font-size:15px;">SLOVENIA</text>
+          <text x="12" y="58" transform="rotate(-18 12 58)" style="font-size:10px;fill:#b3206f;font-weight:700;letter-spacing:.28em;">CANDIDATE</text>
+        </a>
+
+        <!-- Slovenia candidate route (dashed, open decision) -->
+        <g stroke="#ffffff" stroke-width="6" fill="none" opacity="0.85" stroke-linecap="round">
+          <path d="M 100 22 L 118 58 L 34 92"/>
+        </g>
+        <g stroke="#8a7444" stroke-width="3" fill="none" stroke-dasharray="7 7" stroke-linecap="round">
+          <path d="M 100 22 L 118 58 L 34 92"/>
+        </g>
+        <g class="dots">
+          <a href="bled-bohinj.html"><circle class="dot-core" cx="100" cy="22" r="7" fill="#8a7444" stroke="#fff" stroke-width="2.5"/><text x="110" y="27" class="dot-label" style="font-size:12px;">Bled &amp; Bohinj</text></a>
+          <a href="ljubljana.html"><circle class="dot-core" cx="118" cy="58" r="7" fill="#8a7444" stroke="#fff" stroke-width="2.5"/><text x="126" y="80" text-anchor="middle" class="dot-label" style="font-size:12px;">Ljubljana</text></a>
+          <a href="piran.html"><circle class="dot-core" cx="34" cy="92" r="7" fill="#8a7444" stroke="#fff" stroke-width="2.5"/><text x="44" y="112" text-anchor="middle" class="dot-label" style="font-size:12px;">Piran</text></a>
+        </g>
 
         <!-- Day-trip branch lines (casing + dashed) -->
         <g stroke="#ffffff" stroke-width="7" fill="none" opacity="0.85" stroke-linecap="round">
@@ -258,7 +290,7 @@
           <a href="berat.html"><circle cx="816" cy="675" r="14" fill="#fff"/><circle class="stop-core" cx="816" cy="675" r="12" fill="#16324a"/><text x="816" y="679" text-anchor="middle">6</text><text x="833" y="679" class="place-label">Berat</text></a>
         </g>
       </svg>
-      <figcaption>Schematic chart — not to scale, geography by feel rather than by surveyor (borders included). Every numbered stop and every magenta dot is clickable and opens its field-notes page.</figcaption>
+      <figcaption>Schematic chart — not to scale, geography by feel rather than by surveyor (borders included). Every numbered stop and every magenta dot is clickable and opens its field-notes page. Slovenia sits top-left as a candidate: gold dots and a dashed route, open options rather than the standing plan.</figcaption>
     </figure>
     <div class="map-legend">
       <span class="key"><span class="k-num">n</span> Overnight stop — click for its page</span>
@@ -268,6 +300,8 @@
       <span class="key"><span class="k-line k-al"></span> Albania</span>
       <span class="key"><span class="k-line k-dash"></span> Day-trip branch</span>
       <span class="key"><span class="k-line k-bd"></span> Country border</span>
+      <span class="key"><span class="k-line k-si"></span> Slovenia candidate route</span>
+      <span class="key"><span class="k-sdot"></span> Candidate stop — open decision</span>
     </div>
     <div class="todo-row">
       <a class="stop" href="split.html">1 · Split</a>
@@ -286,9 +320,13 @@
       <a href="kruje-bovilla.html">Krujë &amp; Bovilla</a>
       <a href="himare.html">Himarë</a>
       <a href="gjirokaster.html">Gjirokastër</a>
+      <a href="slovenia.html">Slovenia — candidate:</a>
+      <a href="ljubljana.html">Ljubljana</a>
+      <a href="bled-bohinj.html">Bled &amp; Bohinj</a>
+      <a href="piran.html">Piran &amp; the coast</a>
     </div>
     <div class="callout">
-      <strong>Every stop and dot on the chart is clickable</strong> — numbered stops open their what-to-see page, magenta dots open the day-trip pages (all built from the shared <a href="https://maps.app.goo.gl/JvVEqDxnpzLgJpACA" target="_blank" rel="noopener">"Balkans" Google Maps list</a>).
+      <strong>Every stop and dot on the chart is clickable</strong> — numbered stops open their what-to-see page, magenta dots open the day-trip pages (all built from the shared <a href="https://maps.app.goo.gl/JvVEqDxnpzLgJpACA" target="_blank" rel="noopener">"Balkans" Google Maps list</a>), and the gold dots top-left open the Slovenia candidate pages — an open option, not the standing plan.
     </div>
   </section>
 
