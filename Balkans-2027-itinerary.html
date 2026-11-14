@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Balkans 2027 — Split to Tirana · The Itinerary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..700&amp;family=Bodoni+Moda:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/things.css">
+  <style>
+/* map typography */
+.route-svg text{font-family:var(--sans)}
+.route-svg .dot-label{font-size:14px;fill:var(--ink);font-weight:600;letter-spacing:.06em}
+.route-svg .country-label{font-size:18px;fill:var(--ink);opacity:.62;font-weight:600;letter-spacing:.35em}
+.route-svg .place-label{font-size:15px;fill:var(--ink);font-weight:600;letter-spacing:.04em}
+.route-svg .border-flag{font-size:16px}
+.route-svg a{cursor:pointer}
+.route-svg .dot-core,.route-svg .stop-core{transition:r .15s var(--ease-out)}
+.route-svg a:hover .dot-core{r:9}
+.route-svg a:hover circle{stroke:var(--light)}
+
+/* legend */
+.map-legend{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:1rem;padding:0}
+.key{display:inline-flex;align-items:center;gap:.55em;color:var(--ink-2)}
+.k-num{display:inline-grid;place-items:center;width:1.5em;height:1.5em;border-radius:50%;background:var(--ink);color:#fff;font-size:.72em;font-weight:700}
+.k-dot{width:.9em;height:.9em;border-radius:50%;background:var(--light);border:2px solid #fff;box-shadow:0 0 0 1px var(--rule)}
+.k-line{width:2em;height:0;border-top:3px solid var(--ink)}
+.k-hr{border-color:#3a576d}.k-me{border-color:#8a7444}.k-al{border-color:#12293d}
+.k-dash{border-top:3px dashed var(--light)}
+.k-bd{border-top:2px dashed var(--ink)}
+
+/* the navy day-by-day panel */
+.deep .day{border-top-color:rgba(226,238,247,.2)}
+.deep .day .country{color:#f3b3d4}
+.deep .sleep{color:#b5c6d2}
+.deep .sleep strong{color:#fff}
+.deep h2{color:#fff}
+.deep .lede,.deep li{color:#d3e4f1}
+.deep strong{color:#fff}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="mark" href="Balkans-2027-itinerary.html"><b>Balkans 2027</b><span>Split → Tirana</span></a>
+    <nav class="nav">
+      <a href="things-to-do.html">Field notes</a>
+      <a href="Balkans-2027-itinerary.html" aria-current="page">Itinerary</a>
+      <a href="https://maps.app.goo.gl/JvVEqDxnpzLgJpACA" target="_blank" rel="noopener">Map list</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="sheet">
+
+  <header class="hero hero-paper">
+    <h1>Balkans 2027</h1>
+    <p class="sub">Split to Tirana — coast, bays, lakes and mountains, by bus and ferry, in one direction only.</p>
+    <div class="badges">
+      <span class="badge">14 days / 13 nights</span>
+      <span class="badge">Late May – early June 2027</span>
+      <span class="badge">Coast + a bit of mountains</span>
+      <span class="badge">No rental car — buses &amp; ferries</span>
+      <span class="badge">Open-jaw: in Split (SPU), out Tirana (TIA)</span>
+    </div>
+    <p class="route">
+      <span class="stop"><a href="split.html">Split</a></span><span class="arrow">→</span>
+      <span class="stop"><a href="dubrovnik.html">Dubrovnik</a></span><span class="arrow">→</span>
+      <span class="stop"><a href="kotor.html">Kotor</a></span><span class="arrow">→</span>
+      <span class="stop"><a href="shkoder.html">Shkodër</a></span><span class="arrow">→</span>
+      <span class="stop"><a href="tirana.html">Tirana</a></span><span class="arrow">→</span>
+      <span class="stop"><a href="berat.html">Berat</a></span>
+    </p>
+  </header>
+
+  <section class="sec">
+    <p class="lab head">Country still open</p>
+    <p class="lede prose" style="margin-top:1rem;">The trip is decided; the country isn't, yet. Slovenia joined the shortlist via two route decks — see the <a href="slovenia.html">Slovenia candidate page</a> and the <a href="flights-visa.html">Flights &amp; visas</a> page that covers every option. This Split → Tirana plan stays intact below until something beats it.</p>
+  </section>
+
+  <section class="sec">
+    <h2>The route, on a map</h2>
+    <figure class="map-frame">
+      <svg class="route-svg" viewBox="0 0 960 830" role="img" aria-label="Stylized route map from Split to Berat, with clickable stops and day trips">
+        <defs>
+          <linearGradient id="seaGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#bdd8e5"/>
+            <stop offset="1" stop-color="#a9cbdc"/>
+          </linearGradient>
+          <linearGradient id="landGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f4f5f0"/>
+            <stop offset="1" stop-color="#eceee6"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Sea -->
+        <rect x="0" y="0" width="960" height="830" fill="url(#seaGrad)"/>
+        <g stroke="#ffffff" stroke-width="2" fill="none" opacity="0.25">
+          <path d="M 60 330 q 15 -10 30 0 q 15 10 30 0"/>
+          <path d="M 120 440 q 15 -10 30 0 q 15 10 30 0"/>
+          <path d="M 40 560 q 15 -10 30 0 q 15 10 30 0"/>
+          <path d="M 300 520 q 15 -10 30 0 q 15 10 30 0"/>
+          <path d="M 200 620 q 15 -10 30 0 q 15 10 30 0"/>
+          <path d="M 420 640 q 15 -10 30 0 q 15 10 30 0"/>
+          <path d="M 560 730 q 15 -10 30 0 q 15 10 30 0"/>
+          <path d="M 260 760 q 15 -10 30 0 q 15 10 30 0"/>
+        </g>
+
+        <!-- Islands -->
+        <g fill="#a9cbdc" stroke="#ffffff" stroke-width="1.5" opacity="0.9">
+          <ellipse cx="155" cy="288" rx="20" ry="6" transform="rotate(-14 155 288)"/>
+          <ellipse cx="190" cy="308" rx="17" ry="6" transform="rotate(-11 190 308)"/>
+          <ellipse cx="245" cy="350" rx="15" ry="5" transform="rotate(-20 245 350)"/>
+          <ellipse cx="105" cy="355" rx="12" ry="5" transform="rotate(-8 105 355)"/>
+        </g>
+
+        <!-- Land -->
+        <path fill="url(#landGrad)" stroke="#16324a" stroke-width="1.5" stroke-opacity="0.55" d="
+          M 165 0
+          C 175 60, 185 140, 205 225
+          C 208 242, 206 248, 212 254
+          C 235 272, 285 278, 318 287
+          C 355 298, 370 312, 392 322
+          C 415 332, 438 350, 462 354
+          C 480 357, 488 372, 500 382
+          C 512 390, 516 392, 524 393
+          C 540 397, 552 400, 562 403
+          C 570 406, 573 409, 578 412
+          C 590 418, 605 428, 622 433
+          C 630 437, 633 440, 638 443
+          C 652 452, 662 460, 672 466
+          C 686 472, 700 472, 710 474
+          C 718 480, 724 490, 728 500
+          C 740 508, 752 512, 760 517
+          C 745 545, 738 560, 735 585
+          C 737 615, 737 665, 740 712
+          C 750 730, 765 750, 782 768
+          C 798 782, 812 792, 828 802
+          L 960 810 L 960 0 Z"/>
+
+        <!-- Bay of Kotor -->
+        <path fill="#bdd8e5" stroke="#ffffff" stroke-width="2" d="
+          M 578 412
+          C 585 404, 595 402, 603 404
+          C 611 406, 614 410, 617 415
+          C 612 424, 604 428, 596 424
+          C 586 420, 580 416, 578 412 Z"/>
+
+        <!-- Lake Skadar -->
+        <ellipse cx="700" cy="460" rx="42" ry="26" transform="rotate(-8 700 460)"
+                 fill="#bdd8e5" stroke="#ffffff" stroke-width="2"/>
+        <text x="672" y="456" text-anchor="middle" class="dot-label" style="font-size:12px;">Lake Skadar</text>
+
+        <!-- Drin river -->
+        <path d="M 740 468 C 750 488, 756 502, 760 516" fill="none" stroke="#bdd8e5" stroke-width="3" opacity="0.8"/>
+
+        <!-- Mountains -->
+        <g fill="#16324a" opacity="0.25">
+          <path d="M 285 274 L 296 254 L 304 268 L 312 254 L 322 274 Z"/>
+          <path d="M 655 310 L 666 286 L 673 300 L 681 282 L 694 310 Z"/>
+          <path d="M 773 406 L 784 384 L 792 398 L 802 378 L 815 406 Z"/>
+          <path d="M 628 406 L 637 392 L 646 406 Z"/>
+        </g>
+
+        <!-- Country labels -->
+        <text x="290" y="205" transform="rotate(16 290 205)" class="country-label">CROATIA</text>
+        <text x="600" y="360" transform="rotate(-12 600 360)" class="country-label" style="font-size:22px;">MONTENEGRO</text>
+        <text x="868" y="600" transform="rotate(72 868 600)" class="country-label" style="font-size:24px;">ALBANIA</text>
+        <text x="470" y="330" transform="rotate(24 470 330)" class="country-label" style="font-size:17px;">BOSNIA</text>
+
+        <!-- Day-trip branch lines (casing + dashed) -->
+        <g stroke="#ffffff" stroke-width="7" fill="none" opacity="0.85" stroke-linecap="round">
+          <path d="M 215 249 L 300 70"/>
+          <path d="M 497 380 L 449 276"/>
+          <path d="M 614 415 L 640 404"/>
+          <path d="M 698 412 L 672 304"/>
+          <path d="M 698 412 L 672 464"/>
+          <path d="M 740 468 L 796 462"/>
+          <path d="M 796 581 L 803 562"/>
+          <path d="M 816 675 L 781 766"/>
+          <path d="M 816 675 L 849 770"/>
+        </g>
+        <g stroke="#b3206f" stroke-width="3" fill="none" stroke-dasharray="7 7" stroke-linecap="round">
+          <path d="M 215 249 L 300 70"/>
+          <path d="M 497 380 L 449 276"/>
+          <path d="M 614 415 L 640 404"/>
+          <path d="M 698 412 L 672 304"/>
+          <path d="M 698 412 L 672 464"/>
+          <path d="M 740 468 L 796 462"/>
+          <path d="M 796 581 L 803 562"/>
+          <path d="M 816 675 L 781 766"/>
+          <path d="M 816 675 L 849 770"/>
+        </g>
+
+        <!-- Main route (casing then country colours) -->
+        <g stroke="#ffffff" stroke-width="8" fill="none" opacity="0.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 215 249 L 313 283 L 385 318 L 497 380 L 521 391"/>
+          <path d="M 561 401 L 575 410 L 614 415 L 626 435 L 669 465 L 698 412 L 719 424"/>
+          <path d="M 740 468 L 764 511 L 796 581 L 771 656 L 750 668 L 816 675"/>
+        </g>
+        <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 215 249 L 313 283 L 385 318 L 497 380 L 521 391" stroke="#3a576d" stroke-width="4"/>
+          <path d="M 561 401 L 575 410 L 614 415 L 626 435 L 669 465 L 698 412 L 719 424" stroke="#8a7444" stroke-width="4"/>
+          <path d="M 740 468 L 764 511 L 796 581 L 771 656 L 750 668 L 816 675" stroke="#12293d" stroke-width="4"/>
+        </g>
+
+        <!-- Country borders (schematic): white casing, then dashed ink -->
+        <g stroke="#ffffff" stroke-width="6" fill="none" opacity="0.85" stroke-linejoin="round">
+          <path d="M 380 0 L 388 80 L 400 160 L 416 240 L 436 300 L 462 340 L 486 364"/>
+          <path d="M 688 12 L 664 100 L 640 150 L 616 200 L 594 250 L 575 300 L 562 348 L 555 384 L 551 398"/>
+          <path d="M 875 12 L 886 90 L 896 170 L 893 250 L 880 320 L 860 370 L 800 400 L 719 424 L 712 455 L 715 485 L 722 512 L 728 540 L 731 565 L 735 585"/>
+        </g>
+        <g stroke="#16324a" stroke-width="2" fill="none" stroke-dasharray="6 5" opacity="0.6" stroke-linejoin="round">
+          <path d="M 380 0 L 388 80 L 400 160 L 416 240 L 436 300 L 462 340 L 486 364"/>
+          <path d="M 688 12 L 664 100 L 640 150 L 616 200 L 594 250 L 575 300 L 562 348 L 555 384 L 551 398"/>
+          <path d="M 875 12 L 886 90 L 896 170 L 893 250 L 880 320 L 860 370 L 800 400 L 719 424 L 712 455 L 715 485 L 722 512 L 728 540 L 731 565 L 735 585"/>
+        </g>
+
+        <!-- Border ticks -->
+        <g stroke="#16324a" stroke-width="2" stroke-dasharray="3 3" opacity="0.5">
+          <line x1="554" y1="388" x2="568" y2="414"/>
+          <line x1="712" y1="412" x2="726" y2="436"/>
+        </g>
+        <text x="548" y="380" text-anchor="middle" class="border-flag">HR · ME</text>
+        <text x="733" y="406" text-anchor="middle" class="border-flag">ME · AL</text>
+
+        <!-- Compass -->
+        <g opacity="0.75">
+          <circle cx="915" cy="62" r="18" fill="#ffffff" stroke="#dfe7ea"/>
+          <path d="M 915 74 L 915 54 M 915 54 L 910 62 M 915 54 L 920 62" stroke="#3a576d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <text x="907" y="46" font-size="12" font-weight="700" fill="#16324a">N</text>
+        </g>
+
+        <!-- Day-trip dots (clickable) -->
+        <g class="dots">
+          <a href="plitvice.html"><circle class="dot-core" cx="300" cy="70" r="7" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="313" y="74" class="dot-label">Plitvice</text></a>
+          <a href="mostar.html"><circle class="dot-core" cx="449" cy="276" r="7" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="462" y="280" class="dot-label">Mostar</text></a>
+          <a href="lovcen.html"><circle class="dot-core" cx="640" cy="404" r="7" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="640" y="392" text-anchor="middle" class="dot-label">Lovćen</text></a>
+          <a href="durmitor.html"><circle class="dot-core" cx="672" cy="304" r="7" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="686" y="308" class="dot-label">Durmitor</text></a>
+          <a href="budva-riviera.html"><circle class="dot-core" cx="635" cy="441" r="7" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="623" y="461" text-anchor="end" class="dot-label">Sveti Stefan</text></a>
+          <a href="skadar.html"><circle class="dot-core" cx="672" cy="464" r="7" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="672" y="486" text-anchor="middle" class="dot-label">Virpazar</text></a>
+          <a href="koman.html"><circle class="dot-core" cx="796" cy="462" r="7" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="806" y="480" class="dot-label">Komani L.</text></a>
+          <a href="kruje-bovilla.html"><circle class="dot-core" cx="803" cy="562" r="7" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="817" y="566" class="dot-label">Krujë &amp; Bovilla</text></a>
+          <a href="himare.html"><circle class="dot-core" cx="781" cy="766" r="7" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="795" y="770" class="dot-label">Himarë</text></a>
+          <a href="gjirokaster.html"><circle class="dot-core" cx="849" cy="770" r="7" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="863" y="774" class="dot-label">Gjirokastër</text></a>
+        </g>
+
+        <!-- Overnight stops (clickable, numbered) -->
+        <g class="stops" font-weight="700" font-size="12" fill="#fff">
+          <a href="split.html"><circle cx="215" cy="249" r="14" fill="#fff"/><circle class="stop-core" cx="215" cy="249" r="12" fill="#16324a"/><text x="215" y="253" text-anchor="middle">1</text><text x="232" y="238" class="place-label">Split</text></a>
+          <a href="dubrovnik.html"><circle cx="497" cy="380" r="14" fill="#fff"/><circle class="stop-core" cx="497" cy="380" r="12" fill="#16324a"/><text x="497" y="384" text-anchor="middle">2</text><text x="480" y="371" text-anchor="end" class="place-label">Dubrovnik</text></a>
+          <a href="kotor.html"><circle cx="614" cy="415" r="14" fill="#fff"/><circle class="stop-core" cx="614" cy="415" r="12" fill="#16324a"/><text x="614" y="419" text-anchor="middle">3</text><text x="598" y="437" text-anchor="end" class="place-label">Kotor</text></a>
+          <a href="shkoder.html"><circle cx="740" cy="468" r="14" fill="#fff"/><circle class="stop-core" cx="740" cy="468" r="12" fill="#16324a"/><text x="740" y="472" text-anchor="middle">4</text><text x="754" y="462" class="place-label">Shkodër</text></a>
+          <a href="tirana.html"><circle cx="796" cy="581" r="14" fill="#fff"/><circle class="stop-core" cx="796" cy="581" r="12" fill="#16324a"/><text x="796" y="585" text-anchor="middle">5</text><text x="780" y="603" text-anchor="end" class="place-label">Tirana</text></a>
+          <a href="berat.html"><circle cx="816" cy="675" r="14" fill="#fff"/><circle class="stop-core" cx="816" cy="675" r="12" fill="#16324a"/><text x="816" y="679" text-anchor="middle">6</text><text x="833" y="679" class="place-label">Berat</text></a>
+        </g>
+      </svg>
+      <figcaption>Schematic chart — not to scale, geography by feel rather than by surveyor (borders included). Every numbered stop and every magenta dot is clickable and opens its field-notes page.</figcaption>
+    </figure>
+    <div class="map-legend">
+      <span class="key"><span class="k-num">n</span> Overnight stop — click for its page</span>
+      <span class="key"><span class="k-dot"></span> Detour / day trip from the map list</span>
+      <span class="key"><span class="k-line k-hr"></span> Croatia</span>
+      <span class="key"><span class="k-line k-me"></span> Montenegro</span>
+      <span class="key"><span class="k-line k-al"></span> Albania</span>
+      <span class="key"><span class="k-line k-dash"></span> Day-trip branch</span>
+      <span class="key"><span class="k-line k-bd"></span> Country border</span>
+    </div>
+    <div class="todo-row">
+      <a class="stop" href="split.html">1 · Split</a>
+      <a class="stop" href="dubrovnik.html">2 · Dubrovnik</a>
+      <a class="stop" href="kotor.html">3 · Kotor</a>
+      <a class="stop" href="shkoder.html">4 · Shkodër</a>
+      <a class="stop" href="tirana.html">5 · Tirana</a>
+      <a class="stop" href="berat.html">6 · Berat</a>
+      <a href="plitvice.html">Plitvice</a>
+      <a href="mostar.html">Mostar</a>
+      <a href="budva-riviera.html">Budva Riviera</a>
+      <a href="lovcen.html">Lovćen</a>
+      <a href="durmitor.html">Durmitor</a>
+      <a href="skadar.html">Lake Skadar</a>
+      <a href="koman.html">Komani Lake</a>
+      <a href="kruje-bovilla.html">Krujë &amp; Bovilla</a>
+      <a href="himare.html">Himarë</a>
+      <a href="gjirokaster.html">Gjirokastër</a>
+    </div>
+    <div class="callout">
+      <strong>Every stop and dot on the chart is clickable</strong> — numbered stops open their what-to-see page, magenta dots open the day-trip pages (all built from the shared <a href="https://maps.app.goo.gl/JvVEqDxnpzLgJpACA" target="_blank" rel="noopener">"Balkans" Google Maps list</a>).
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Why this route</h2>
+    <p class="lede prose">Four reasons this shape of trip won.</p>
+    <table class="ll field">
+      <thead><tr><th class="n">No.</th><th>Reason</th><th class="desc">Because</th></tr></thead>
+      <tbody>
+        <tr><td class="n num">1</td><td class="nm">One direction only</td><td class="desc">Every move is forward along the coast — no backtracking, no wasted travel days.</td></tr>
+        <tr><td class="n num">2</td><td class="nm">The right window</td><td class="desc">Late May / early June: the sea is swimmable-ish, towns aren't crushed yet, mountain roads are clear.</td></tr>
+        <tr><td class="n num">3</td><td class="nm">Three countries, not four</td><td class="desc">Fewer currencies, fewer borders, and one less 3-hour bus leg than the four-country version.</td></tr>
+        <tr><td class="n num">4</td><td class="nm">Mountains included</td><td class="desc">Lovćen above Kotor, Lake Skadar out of Shkodër, and the hills around Berat — for free.</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">
+      <strong>Nights saved, not Bosnia skipped.</strong> Removing the Mostar overnight freed one night exactly where the trip was thinnest — <strong>Dubrovnik went from 2 → 3 nights</strong>. Two nights of the trip now stop being about moving. Bosnia is still on the table as a day trip (see below).
+    </div>
+  </section>
+
+  <section class="sec deep">
+    <h2>Day by day</h2>
+    <div class="timeline">
+
+      <div class="day">
+        <span class="country">Days 1–2 · Split, Croatia — 2 nights</span>
+        <h3>Arrive &amp; explore the palace</h3>
+        <ul>
+          <li><strong>D1</strong> — Arrive SPU. Evening in Diocletian's Palace, drink on the Riva.</li>
+          <li><strong>D2</strong> — Palace + cathedral, climb Marjan hill for the sunset, swim at Bačvice. <em>Alternative:</em> day tour to Krka waterfalls, or Salona + Trogir by local bus.</li>
+        </ul>
+        <p class="sleep"><strong>Sleep:</strong> inside or just outside the palace walls.</p>
+      </div>
+
+      <div class="day">
+        <span class="country">Day 3 · Split → Dubrovnik — 3 nights</span>
+        <h3>Coastal transfer (~4.5h)</h3>
+        <ul>
+          <li>Bus along the coast (<em>sit left, sea side</em>) — or the catamaran if it's running: similar time, far nicer.</li>
+          <li>Arrive with the afternoon intact. First evening: walk the Stradun once the day-trippers leave.</li>
+        </ul>
+        <p class="sleep"><strong>Sleep:</strong> inside the walls is magical and noisy; Ploče or Lapad is calmer.</p>
+      </div>
+
+      <div class="day">
+        <span class="country">Days 4–5 · Dubrovnik</span>
+        <h3>The comfortable stop</h3>
+        <ul>
+          <li><strong>D4</strong> — City walls at opening time (<em>go early, seriously</em>). Cable car to Srđ. Swim at Buža.</li>
+          <li><strong>D5</strong> — Lokrum island, or bus to Cavtat / Trsteno arboretum. Or a full lazy day: swim, eat, repeat.</li>
+          <li>The walls, an island, and a slow day all fit now — no rushing.</li>
+        </ul>
+      </div>
+
+      <div class="day">
+        <span class="country">Days 6–8 · Dubrovnik → Kotor, Montenegro — 3 nights</span>
+        <h3>The fjord-like bay</h3>
+        <ul>
+          <li><strong>D6</strong> — Bus ~2.5–3h with the border crossing. Evening in the old town.</li>
+          <li><strong>D7</strong> — Kotor old town, then the <strong>Ladder of Kotor</strong>: bus/taxi to Krstac and walk back down. Best free mountain day of the trip.</li>
+          <li><strong>D8</strong> — Morning: Perast + boat to Our Lady of the Rocks. Afternoon: Lovćen serpentine + Njeguši village, pršut and cheese tasting. (<em>Or split these across D7–D8 if the pace feels tight.</em>)</li>
+        </ul>
+        <p class="sleep"><strong>Sleep:</strong> inside Kotor's walls, or Dobrota across the water for quiet.</p>
+      </div>
+
+      <div class="day">
+        <span class="country">Day 9 · Kotor → Shkodër, Albania — 1 night</span>
+        <h3>The long leg (~4–5h)</h3>
+        <ul>
+          <li>Usually with a change at Podgorica, crossing at Hani i Hotit. Some years a direct seasonal bus runs.</li>
+          <li>Evening: <strong>Rozafa castle</strong> above the city, walk the pedestrian street.</li>
+        </ul>
+        <p class="sleep"><strong>Sleep:</strong> Shkodër centre.</p>
+      </div>
+
+      <div class="day">
+        <span class="country">Days 10–11 · Shkodër → Tirana — 2 nights</span>
+        <h3>Lake day + capital</h3>
+        <ul>
+          <li><strong>D10</strong> — Morning: <strong>Lake Skadar boat trip</strong> from Virpazar, or a Koman Lake ferry day tour (long day — only if you're happy arriving in Tirana late). Bus to Tirana ~2h, frequent.</li>
+          <li><strong>D11</strong> — Tirana: <strong>Bunk'Art 1 or 2</strong>, Dajti Express cable car, Blloku for dinner.</li>
+        </ul>
+      </div>
+
+      <div class="day">
+        <span class="country">Days 12–13 · Tirana → Berat — 2 nights</span>
+        <h3>The city of a thousand windows</h3>
+        <ul>
+          <li><strong>D12</strong> — Bus ~2.5h from the South/West terminal; arrive by early afternoon. Mangalem &amp; Gorica quarters.</li>
+          <li><strong>D13</strong> — The castle, Onufri Museum. <em>Optional:</em> Osumi canyon walk, or a wine tasting at one of the Cobo/Çobo estates.</li>
+        </ul>
+        <p class="sleep"><strong>Sleep:</strong> a restored Ottoman house in Mangalem.</p>
+      </div>
+
+      <div class="day">
+        <span class="country">Day 14 · Berat → Tirana airport</span>
+        <h3>Home</h3>
+        <ul>
+          <li>Bus back to Tirana, then airport bus or taxi. <strong>Allow 4h buffer</strong> before an international flight.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Transport reality check</h2>
+    <table>
+      <thead>
+        <tr><th>Leg</th><th>Typical</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Split → Dubrovnik</td><td>~4.5h</td><td class="note">Coastal bus or catamaran; the longest Croatian leg</td></tr>
+        <tr><td>Dubrovnik → Kotor</td><td>~2.5–3h</td><td class="note">Border adds 30–60 min</td></tr>
+        <tr><td>Kotor → Shkodër</td><td>~4–5h</td><td class="note">Change at Podgorica; longest day overall</td></tr>
+        <tr><td>Shkodër → Tirana</td><td>~2h</td><td class="note">Frequent, pay on board</td></tr>
+        <tr><td>Tirana → Berat</td><td>~2.5h</td><td class="note">Morning departures, cash</td></tr>
+        <tr><td>Berat → TIA</td><td>~3h total</td><td class="note">Allow a generous buffer</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">
+      <strong>None of these times or frequencies are confirmed</strong> — they're the normal pattern, not a timetable. Re-check ~6–8 weeks before we go. Ticket sites worth watching: <em>GetByBus, BalkanViator, Arriva</em>, and the Albanian operators' Facebook pages (they update there first).
+    </div>
+    <div class="callout">
+      <strong>Border note.</strong> The coastal road east of Dubrovnik clips through Bosnia at Neum (~9km). Since the Pelješac Bridge opened, many buses stay in Croatia the whole way — either way is painless. Just <strong>carry your passport in your day bag</strong>, not the luggage hold, and don't panic at two exit/entry stamps.
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Bosnia, without unpacking</h2>
+    <p class="lede prose">Three ways to get Bosnia without giving up a bed night — ranked by how well they fit a relaxed trip.</p>
+    <div class="options">
+      <div class="option best">
+        <span class="tag">Best fit</span>
+        <h3>1 · Trebinje — half-day from Dubrovnik</h3>
+        <p>30–45 min over the border. Ottoman-era old town, plane trees, a famous wine region, almost no coach traffic. Doable as a late-afternoon/evening trip so our Dubrovnik day stays intact.</p>
+        <p><strong>If we only do one Bosnia thing, do this.</strong></p>
+      </div>
+      <div class="option">
+        <span class="tag">The classic</span>
+        <h3>2 · Mostar — full day from Dubrovnik</h3>
+        <p>Organised day tours run ~10–11h with the Stari Most, bazaar, often Počitelj or Blagaj. The catch: it eats one of our two full Dubrovnik days — walls, Lokrum and Mostar don't all fit in 3 nights.</p>
+      </div>
+      <div class="option">
+        <span class="tag">Nearly free</span>
+        <h3>3 · Neum — transit stop</h3>
+        <p>Bosnia's 20km of coast, right on the Dubrovnik→Kotor road. Cheaper food and drink, a small beach. Useful as a swim-and-lunch break on the Kotor transfer.</p>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>Don't try to "do Mostar on the way"</strong> between Split and Dubrovnik in one day — you'd arrive with luggage at 7pm having seen the bridge for three rushed hours. If Mostar matters to the group, it gets a night; otherwise use option 1 or 3.
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Options if we want to tweak</h2>
+    <div class="checklist">
+      <ul>
+        <li><strong>More mountains?</strong> Add a night in Theth or Valbona via an organised tour from Shkodër — pushes the pace toward "moderate".</li>
+        <li><strong>An island?</strong> A night on Hvar or Korčula, Split → island → Dubrovnik by catamaran. Lovely, but adds cost and seasonal-transport risk.</li>
+        <li><strong>Only 7–10 days?</strong> Dubrovnik (3) → Kotor (3) → Tirana (2), fly out of TIA. Drop Split entirely — the only relaxed version in a week.</li>
+        <li><strong>Bosnia as a proper stop?</strong> Mostar slots in between Split and Dubrovnik as a single night — one ~3h bus each day.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Book early &amp; get ready</h2>
+    <div class="checklist">
+      <p><strong>Book early — late May is already busy:</strong></p>
+      <ul>
+        <li>Dubrovnik &amp; Kotor accommodation — cruise traffic peaks, prices climb fast after mid-May.</li>
+        <li>Koman Lake / Skadar tours — they sell out in June.</li>
+        <li>Fixed-date items: our two flights.</li>
+      </ul>
+      <p><strong>Money &amp; paperwork:</strong></p>
+      <ul>
+        <li><strong>Currencies:</strong> Croatia = euro · Montenegro = euro (unilateral) · Albania = lek. Cards fine in Croatia &amp; Montenegro; carry cash in Albania.</li>
+        <li><strong>Schengen:</strong> Croatia counts against your 90/180 days; Montenegro and Albania don't.</li>
+        <li><strong>Passport:</strong> most nationalities need 3+ months validity beyond departure — <strong>check yours, this is the #1 trip-killer</strong>.</li>
+        <li><strong>Insurance:</strong> an EHIC/GHIC won't cover Montenegro or Albania — get real travel insurance.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="colophon">
+    <div class="pager">
+      <a href="things-to-do.html">Field notes by place</a>
+      <span class="lab">Balkans 2027 · Split → Tirana</span>
+      <a href="split.html">Start with Split →</a>
+    </div>
+    <p class="proof">Split → Dubrovnik → Kotor → Shkodër → Tirana → Berat · prepared for the group · pins from the shared map list</p>
+  </footer>
+
+</main>
+</body>
+</html>
