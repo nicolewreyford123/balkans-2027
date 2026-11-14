@@ -226,8 +226,9 @@ section{position:relative}
 /* itinerary page adaptations (kept class names) */
 .hero-paper{padding:clamp(28px,4vw,56px) 0 clamp(16px,2vw,28px);text-align:left}
 .badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
-.badge{font-family:var(--sans);font-stretch:94%;font-size:.92rem;letter-spacing:.1em;text-transform:uppercase;
+.badge{font-family:var(--sans);font-stretch:94%;font-size:.92rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
   color:var(--ink-2);border:1px solid var(--rule);border-radius:999px;padding:.35em .9em}
+a.badge:hover{border-color:var(--light);color:var(--light)}
 .route{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem;margin-top:1.2rem;font-size:1.05rem}
 .route .arrow{color:var(--light-deep);font-family:var(--sans)}
 .route .stop a{text-decoration:none;border-bottom:1px solid var(--rule)}
