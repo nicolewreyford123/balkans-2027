@@ -20,6 +20,27 @@
 .route-svg a:hover .dot-core{r:12}
 .route-svg .tnum{font-size:10px;fill:#fff;font-weight:700}
 .route-svg .pin-num{font-size:11px;fill:#fff;font-weight:700}
+/* map view switch — stops (default) vs all six route options */
+.map-radio{position:absolute;width:1px;height:1px;opacity:0}
+.map-tab{display:inline-block;cursor:pointer;font-family:var(--sans);font-stretch:94%;font-size:.88rem;
+  letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--rule);border-radius:999px;
+  padding:.38em 1.1em;color:var(--ink-2);margin-right:.5rem}
+.map-tab:hover{border-color:var(--light);color:var(--light)}
+.map-radio:checked + .map-tab{background:var(--ink);border-color:var(--ink);color:#fff;font-weight:600}
+.map-radio:focus-visible + .map-tab{outline:2px solid var(--light);outline-offset:3px}
+.map-mode-note{display:block;font-family:var(--sans);font-stretch:94%;font-size:.9rem;color:var(--ink-2);margin:.4rem 0 1rem}
+.route-svg .layer-routes{display:none}
+#mapmode-routes:checked ~ .map-frame .layer-routes{display:block}
+#mapmode-routes:checked ~ .map-frame .layer-stops{display:none}
+#mapmode-routes:checked ~ .map-legend,
+#mapmode-routes:checked ~ .todo-row,
+#mapmode-routes:checked ~ .map-callout{display:none}
+#mapmode-stops:checked ~ .route-key{display:none}
+.route-key{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:1rem;font-family:var(--sans);font-stretch:94%;font-size:.9rem;color:var(--ink-2)}
+.route-key > span{display:inline-flex;align-items:center;gap:.5em}
+.rk-swatch{width:2em;height:0;border-top:4px solid;border-radius:2px;flex:none}
+.rk-num{display:inline-grid;place-items:center;width:1.55em;height:1.55em;border-radius:50%;color:#fff;font-size:.72em;font-weight:700;flex:none}
+.route-key small{display:block;color:var(--ink-3);letter-spacing:.02em}
 .k-num.k-num2{background:#b3206f}
 .k-num.k-snum{background:#8a7444}
 .route-svg a:hover circle{stroke:var(--light)}
@@ -96,6 +117,12 @@
 
   <section class="sec">
     <h2>Every main city, on a map</h2>
+    <p class="lab head">Map view</p>
+    <input class="map-radio" type="radio" name="mapmode" id="mapmode-stops" checked>
+    <label class="map-tab" for="mapmode-stops">All stops</label>
+    <input class="map-radio" type="radio" name="mapmode" id="mapmode-routes">
+    <label class="map-tab" for="mapmode-routes">All six route options</label>
+    <span class="map-mode-note">The same map, two views: the numbered places as they sit on the ground, or all six orders drawn across it. Neither is a decision.</span>
     <figure class="map-frame">
       <svg class="route-svg" viewBox="0 0 700 676" role="img" aria-label="Geographically accurate map of Croatia, Bosnia and Herzegovina and Montenegro, projected from real coordinates: the twelve numbered stops sit at their real positions along the Adriatic coast and inland — navy circles for cities and towns, magenta circles for sites and places to see, with dashed day-trip branches and the three country outlines.">
         <defs>
@@ -134,11 +161,69 @@
         <ellipse cx="579.2" cy="610.6" rx="30" ry="17" transform="rotate(-18 579.2 610.6)" fill="#bdd8e5" stroke="#ffffff" stroke-width="1.6" opacity="0.95"/>
         <text x="579.2" y="614.6" text-anchor="middle" class="dot-label" style="font-size:11px;">Lake Skadar</text>
 
+        <!-- Route layer: all six through-orders, toggled by the CSS-only view switch -->
+        <g class="layer-routes">
+          <g fill="none" stroke="#ffffff" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" opacity="0.9">
+            <polyline points="262.0,126.0 495.1,387.1 437.7,456.3 464.5,547.9 529.4,578.0"/>
+            <polyline points="495.1,387.1 437.7,456.3 305.9,433.6 464.5,547.9 529.4,578.0"/>
+            <polyline points="262.0,126.0 305.9,433.6 464.5,547.9 529.4,578.0 576.6,575.7 437.7,456.3"/>
+            <polyline points="495.1,387.1 437.7,456.3 529.4,578.0 464.5,547.9 305.9,433.6 262.0,126.0"/>
+            <polyline points="529.4,578.0 464.5,547.9 305.9,433.6 437.7,456.3 495.1,387.1"/>
+            <polyline points="529.4,578.0 437.7,456.3 495.1,387.1 262.0,126.0"/>
+          </g>
+          <g fill="none" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round">
+            <polyline points="262.0,126.0 495.1,387.1 437.7,456.3 464.5,547.9 529.4,578.0" stroke="#b3206f"/>
+            <polyline points="495.1,387.1 437.7,456.3 305.9,433.6 464.5,547.9 529.4,578.0" stroke="#0f7b8a" stroke-dasharray="11 6"/>
+            <polyline points="262.0,126.0 305.9,433.6 464.5,547.9 529.4,578.0 576.6,575.7 437.7,456.3" stroke="#9a6b12" stroke-dasharray="2 6"/>
+            <polyline points="495.1,387.1 437.7,456.3 529.4,578.0 464.5,547.9 305.9,433.6 262.0,126.0" stroke="#6d4fa3" stroke-dasharray="14 5 3 5"/>
+            <polyline points="529.4,578.0 464.5,547.9 305.9,433.6 437.7,456.3 495.1,387.1" stroke="#2f7d4f" stroke-dasharray="7 5"/>
+            <polyline points="529.4,578.0 437.7,456.3 495.1,387.1 262.0,126.0" stroke="#d2601f" stroke-dasharray="3 5 10 5"/>
+          </g>
+          <g class="route-badges" font-family="var(--sans)" font-size="12" font-weight="700">
+            <line x1="262.0" y1="126.0" x2="244" y2="110" stroke="#b3206f" stroke-width="1.5" opacity="0.65"/>
+            <line x1="529.4" y1="578.0" x2="547" y2="560" stroke="#b3206f" stroke-width="1.5" opacity="0.65"/>
+            <circle cx="244" cy="110" r="13" fill="#ffffff"/>
+            <circle cx="244" cy="110" r="11" fill="#b3206f"/>
+            <text x="244" y="114" text-anchor="middle" fill="#ffffff">1</text>
+            <circle cx="547" cy="560" r="6.5" fill="#ffffff" stroke="#b3206f" stroke-width="3"/>
+            <line x1="495.1" y1="387.1" x2="477" y2="369" stroke="#0f7b8a" stroke-width="1.5" opacity="0.65"/>
+            <line x1="529.4" y1="578.0" x2="547" y2="596" stroke="#0f7b8a" stroke-width="1.5" opacity="0.65"/>
+            <circle cx="477" cy="369" r="13" fill="#ffffff"/>
+            <circle cx="477" cy="369" r="11" fill="#0f7b8a"/>
+            <text x="477" y="373" text-anchor="middle" fill="#ffffff">2</text>
+            <circle cx="547" cy="596" r="6.5" fill="#ffffff" stroke="#0f7b8a" stroke-width="3"/>
+            <line x1="262.0" y1="126.0" x2="244" y2="142" stroke="#9a6b12" stroke-width="1.5" opacity="0.65"/>
+            <circle cx="244" cy="142" r="13" fill="#ffffff"/>
+            <circle cx="244" cy="142" r="11" fill="#9a6b12"/>
+            <text x="244" y="146" text-anchor="middle" fill="#ffffff">3</text>
+            <circle cx="437.7" cy="456.3" r="6.5" fill="#ffffff" stroke="#9a6b12" stroke-width="3"/>
+            <line x1="495.1" y1="387.1" x2="477" y2="405" stroke="#6d4fa3" stroke-width="1.5" opacity="0.65"/>
+            <line x1="262.0" y1="126.0" x2="280" y2="110" stroke="#6d4fa3" stroke-width="1.5" opacity="0.65"/>
+            <circle cx="477" cy="405" r="13" fill="#ffffff"/>
+            <circle cx="477" cy="405" r="11" fill="#6d4fa3"/>
+            <text x="477" y="409" text-anchor="middle" fill="#ffffff">4</text>
+            <circle cx="280" cy="110" r="6.5" fill="#ffffff" stroke="#6d4fa3" stroke-width="3"/>
+            <line x1="529.4" y1="578.0" x2="511" y2="560" stroke="#2f7d4f" stroke-width="1.5" opacity="0.65"/>
+            <circle cx="511" cy="560" r="13" fill="#ffffff"/>
+            <circle cx="511" cy="560" r="11" fill="#2f7d4f"/>
+            <text x="511" y="564" text-anchor="middle" fill="#ffffff">5</text>
+            <circle cx="495.1" cy="387.1" r="6.5" fill="#ffffff" stroke="#2f7d4f" stroke-width="3"/>
+            <line x1="529.4" y1="578.0" x2="511" y2="596" stroke="#d2601f" stroke-width="1.5" opacity="0.65"/>
+            <line x1="262.0" y1="126.0" x2="280" y2="142" stroke="#d2601f" stroke-width="1.5" opacity="0.65"/>
+            <circle cx="511" cy="596" r="13" fill="#ffffff"/>
+            <circle cx="511" cy="596" r="11" fill="#d2601f"/>
+            <text x="511" y="600" text-anchor="middle" fill="#ffffff">6</text>
+            <circle cx="280" cy="142" r="6.5" fill="#ffffff" stroke="#d2601f" stroke-width="3"/>
+          </g>
+
         <!-- Country labels -->
         <text x="250" y="248" transform="rotate(-24 250 248)" class="country-label">CROATIA</text>
         <text x="345" y="270" transform="rotate(16 345 270)" class="country-label" style="font-size:18px;">BOSNIA</text>
         <text x="578" y="575" class="country-label" style="font-size:13px;letter-spacing:.15em;">MONTENEGRO</text>
 
+        </g>
+
+        <g class="layer-stops">
         <!-- Day-trip / branch lines: white casing then dashed magenta -->
         <g stroke="#ffffff" stroke-width="6" fill="none" opacity="0.8" stroke-linecap="round">
           <line x1="262.0" y1="126.0" x2="226.9" y2="251.7"/>
@@ -157,6 +242,8 @@
           <line x1="529.4" y1="578.0" x2="579.3" y2="610.1"/>
         </g>
 
+        </g>
+
         <!-- Compass -->
         <g opacity="0.8" transform="translate(636 40)">
           <circle cx="0" cy="0" r="18" fill="#ffffff" stroke="#dfe7ea"/>
@@ -164,6 +251,7 @@
           <text x="-4" y="-22" font-size="12" font-weight="700" fill="#16324a">N</text>
         </g>
 
+        <g class="layer-stops">
         <!-- Overnight city stops (navy, numbered) -->
         <g class="stops">
           <a href="split.html"><circle cx="305.9" cy="433.6" r="15" fill="#ffffff"/><circle class="stop-core" cx="305.9" cy="433.6" r="13" fill="#16324a"/><text x="305.9" y="437.6" text-anchor="middle" class="pin-num">1</text><text x="287.9" y="415.6" text-anchor="end" class="place-label">Split</text></a>
@@ -182,14 +270,23 @@
           <a href="durmitor.html"><circle class="dot-core" cx="562.6" cy="473.1" r="10" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="562.6" y="476.6" text-anchor="middle" class="pin-num">8</text><text x="580.6" y="461.1" text-anchor="start" class="dot-label">Durmitor</text></a>
           <a href="skadar.html"><circle class="dot-core" cx="579.3" cy="610.1" r="10" fill="#b3206f" stroke="#fff" stroke-width="2.5"/><text x="579.3" y="613.6" text-anchor="middle" class="pin-num">9</text><text x="597.3" y="614.1" text-anchor="start" class="dot-label">Virpazar</text></a>
         </g>
+        </g>
       </svg>
-      <figcaption>Drawn from real coordinates: the three country outlines and all twelve stops are projected from their mapped positions, so the bay bends where it bends and the lake sits inland behind the coast. Stop numbers follow the field-notes index (the gaps are places from countries we didn't choose); every circle is clickable and opens its field-notes page. Navy circles are cities and towns; magenta circles are sites and places to see. On a phone the chart shrinks to fit the page — pinch to zoom in.</figcaption>
+      <figcaption><strong>Two views, one map.</strong> Switch above between the numbered stops and all six route orders; the country outlines and coordinates are the same in both. In the stops view, drawn from real coordinates: the three country outlines and all twelve stops are projected from their mapped positions, so the bay bends where it bends and the lake sits inland behind the coast. Stop numbers follow the field-notes index (the gaps are places from countries we didn't choose); every circle is clickable and opens its field-notes page. Navy circles are cities and towns; magenta circles are sites and places to see. On a phone the chart shrinks to fit the page — pinch to zoom in. In the routes view, the coloured lines join the gateway cities in the order each option travels — a diagram of the choice, not a road map.</figcaption>
     </figure>
     <div class="map-legend">
       <span class="key"><span class="k-num">n</span> Cities &amp; towns — numbered, click for its page</span>
       <span class="key"><span class="k-num k-num2">n</span> Sites &amp; places to see — numbered, click for its page</span>
       <span class="key"><span class="k-line k-dash"></span> Day-trip branch</span>
       <span class="key"><span class="k-line k-bd"></span> Country border</span>
+    </div>
+    <div class="route-key">
+      <span><span class="rk-num" style="background:#b3206f">1</span><span><span class="rk-swatch" style="border-color:#b3206f"></span> Croatia → Bosnia → Montenegro — north to south<small>ZAG in · TIV/TGD out · 5 stops drawn</small></span></span>
+      <span><span class="rk-num" style="background:#0f7b8a">2</span><span><span class="rk-swatch" style="border-color:#0f7b8a"></span> Bosnia → Croatia → Montenegro — inland, then the coast<small>SJJ in · TIV/TGD out · 5 stops drawn</small></span></span>
+      <span><span class="rk-num" style="background:#9a6b12">3</span><span><span class="rk-swatch" style="border-color:#9a6b12"></span> Croatia → Montenegro → Bosnia — coast first, finish inland<small>ZAG in · SJJ out · 6 stops drawn</small></span></span>
+      <span><span class="rk-num" style="background:#6d4fa3">4</span><span><span class="rk-swatch" style="border-color:#6d4fa3"></span> Bosnia → Montenegro → Croatia — bay, then up the coast<small>SJJ in · ZAG out · 6 stops drawn</small></span></span>
+      <span><span class="rk-num" style="background:#2f7d4f">5</span><span><span class="rk-swatch" style="border-color:#2f7d4f"></span> Montenegro → Croatia → Bosnia — the whole thing northbound<small>TIV/TGD in · SJJ out · 5 stops drawn</small></span></span>
+      <span><span class="rk-num" style="background:#d2601f">6</span><span><span class="rk-swatch" style="border-color:#d2601f"></span> Montenegro → Bosnia → Croatia — reverse of option 1<small>TIV/TGD in · ZAG out · 4 stops drawn</small></span></span>
     </div>
     <div class="todo-row">
       <a href="split.html">1 · Split</a>
@@ -205,7 +302,7 @@
       <a href="jajce.html">21 · Jajce</a>
       <a href="zagreb.html">24 · Zagreb</a>
     </div>
-    <div class="callout">
+    <div class="callout map-callout">
       <strong>Every numbered circle on the chart is clickable</strong> — every main city and day stop opens its field-notes page (all pinned from the shared <a href="https://maps.app.goo.gl/JvVEqDxnpzLgJpACA" target="_blank" rel="noopener">"Balkans" Google Maps list</a> or built from the decks in the trip folder), and each country has its own page holding all its places. Blue circles mark cities and towns; red circles mark sites and places to see.
     </div>
   </section>
