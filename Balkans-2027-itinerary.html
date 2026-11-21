@@ -20,7 +20,7 @@
 .route-svg a:hover .dot-core{r:12}
 .route-svg .tnum{font-size:10px;fill:#fff;font-weight:700}
 .route-svg .pin-num{font-size:11px;fill:#fff;font-weight:700}
-/* map view switch — stops (default) vs two Zagreb-to-Podgorica routes */
+/* map view switch — stops (default) vs three Zagreb-to-Podgorica routes */
 .map-radio{position:absolute;width:1px;height:1px;opacity:0}
 .map-tab{display:inline-block;cursor:pointer;font-family:var(--sans);font-stretch:94%;font-size:.88rem;
   letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--rule);border-radius:999px;
@@ -56,7 +56,8 @@
 
 .route-svg .route-opt{display:none}
 #route-1:checked ~ .map-frame .route-opt.r1,
-#route-2:checked ~ .map-frame .route-opt.r2{display:block}
+#route-2:checked ~ .map-frame .route-opt.r2,
+#route-3:checked ~ .map-frame .route-opt.r3{display:block}
 .route-svg .route-line{stroke-dasharray:100;stroke-dashoffset:100;animation:routesketch .85s var(--ease-out) forwards}
 @keyframes routesketch{to{stroke-dashoffset:0}}
 .route-key{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:1rem;font-family:var(--sans);font-stretch:94%;font-size:.9rem;color:var(--ink-2)}
@@ -64,7 +65,8 @@
   border-radius:8px;padding:.15em .3em;margin:-.15em -.3em}
 .route-key > label:hover{background:rgba(0,0,0,.05)}
 #route-1:checked ~ .route-key .rk1,
-#route-2:checked ~ .route-key .rk2{color:var(--ink);font-weight:600;background:rgba(0,0,0,.05)}
+#route-2:checked ~ .route-key .rk2,
+#route-3:checked ~ .route-key .rk3{color:var(--ink);font-weight:600;background:rgba(0,0,0,.05)}
 .rk-swatch{width:2em;height:0;border-top:4px solid;border-radius:2px;flex:none}
 .rk-num{display:inline-grid;place-items:center;width:1.55em;height:1.55em;border-radius:50%;color:#fff;font-size:.72em;font-weight:700;flex:none}
 .route-key small{display:block;color:var(--ink-3);letter-spacing:.02em}
@@ -114,9 +116,9 @@
     <h1>Balkans 2027</h1>
     <p class="sub">Croatia, Bosnia &amp; Herzegovina and Montenegro are in. The route is still open — the map below numbers every main city and site across the three.</p>
     <div class="badges">
-      <span class="badge">Three countries, one direction</span>
+      <span class="badge">Three countries, open order</span>
       <span class="badge">Late May – early June 2027</span>
-      <span class="badge">Two routes left</span>
+      <span class="badge">Three routes left</span>
       <span class="badge">Zagreb in · Podgorica out</span>
       <a class="badge" href="getting-around.html">Rental car / buses &amp; ferries</a>
       <a class="badge" href="flights-visa.html">Gateways &amp; fares</a>
@@ -125,18 +127,19 @@
 
   <section class="sec">
     <p class="lab head">The next decision</p>
-    <p class="lede prose" style="margin-top:1rem;">The countries are settled: <strong>Croatia, Bosnia &amp; Herzegovina and Montenegro — all three, on both routes below.</strong> The flights have narrowed the shape too: <strong>both routes start in Zagreb and finish in Podgorica</strong>, moving south in one direction, open-jaw at the two ends. What's still open is the order of the countries and the split of nights. The <a href="flights-visa.html">Flights &amp; visas page</a> carries the fares that did the cutting; the <a href="getting-around.html">getting-around page</a> covers how the legs actually run.</p>
+    <p class="lede prose" style="margin-top:1rem;">The countries are settled: <strong>Croatia, Bosnia &amp; Herzegovina and Montenegro — all three, on all three routes below.</strong> The flights have narrowed the shape too: <strong>all three start in Zagreb and finish in Podgorica</strong>, open-jaw at the two ends. Two run south in one direction; the third folds Sarajevo in as an inland overnight between Mostar and the bay. What's still open is which order and which split of nights. The <a href="flights-visa.html">Flights &amp; visas page</a> carries the fares that did the cutting; the <a href="getting-around.html">getting-around page</a> covers how the legs actually run.</p>
   </section>
 
   <section class="sec">
-    <h2>Two ways through, Zagreb to Podgorica</h2>
-    <p class="lede prose">All three countries are in — that isn't up for debate. The November 2026 fare check did the cutting: <strong>Zagreb and Podgorica are the cheapest gateways, effectively tied at about R13.5k</strong>, so both routes below use them. Each visits <a href="croatia.html">Croatia</a>, <a href="bosnia.html">Bosnia &amp; Herzegovina</a> and <a href="montenegro.html">Montenegro</a>; neither is a plan, and neither comes with a day-by-day. They differ in what gets the nights — the coast or Bosnia.</p>
-    <p>The <a href="flights-visa.html">Flights &amp; visas page</a> carries the first real fares, checked on Google Flights in November 2026: Johannesburg undercuts Cape Town by roughly R6,000, and Zagreb and Podgorica are the cheapest gateways found. Those were single-city returns; <strong>the Zagreb-in / Podgorica-out pair both routes use is still to be priced.</strong> If that pair prices badly, a return to Zagreb is the fallback.</p>
+    <h2>Three ways through, Zagreb to Podgorica</h2>
+    <p class="lede prose">All three countries are in — that isn't up for debate. The November 2026 fare check did the cutting: <strong>Zagreb and Podgorica are the cheapest gateways, effectively tied at about R13.5k</strong>, so all three routes below use them. Each visits <a href="croatia.html">Croatia</a>, <a href="bosnia.html">Bosnia &amp; Herzegovina</a> and <a href="montenegro.html">Montenegro</a>; none is a plan, and none comes with a day-by-day. They differ in what gets the nights — the coast, Bosnia, or an inland Sarajevo chapter.</p>
+    <p>The <a href="flights-visa.html">Flights &amp; visas page</a> carries the first real fares, checked on Google Flights in November 2026: Johannesburg undercuts Cape Town by roughly R6,000, and Zagreb and Podgorica are the cheapest gateways found. Those were single-city returns; <strong>the Zagreb-in / Podgorica-out pair all three routes use is still to be priced.</strong> If that pair prices badly, a return to Zagreb is the fallback.</p>
     <ul class="field-list">
       <li><b>1 · Croatia → Bosnia &amp; Herzegovina → Montenegro — coast first, Bosnia in the middle</b> — in <a href="zagreb.html">Zagreb</a>, out Podgorica (TGD). Zagreb (Upper Town, St Mark's, Dolac) → <a href="plitvice.html">Plitvice</a> → <a href="split.html">Split</a> (the palace, Marjan, an island day) → <a href="dubrovnik.html">Dubrovnik</a> (walls, Srđ) → <a href="mostar.html">Mostar</a> (Stari Most, Blagaj, Počitelj, Kravica falls) → overland via Trebinje to <a href="kotor.html">Kotor</a> Bay, Perast and <a href="lovcen.html">Lovćen</a> → Podgorica for the flight. The coast gets the bulk of the nights, Bosnia a short inland chapter. One direction south, open-jaw at the two ends.</li>
       <li><b>2 · Bosnia &amp; Herzegovina → Croatia → Montenegro — inland first, then the Dalmatian coast</b> — in <a href="zagreb.html">Zagreb</a>, out Podgorica (TGD). Zagreb → <a href="sarajevo.html">Sarajevo</a> (4 nights: Baščaršija, the Tunnel of Hope, Vrelo Bosne) → Konjic and <a href="mostar.html">Mostar</a> (4: Stari Most, Blagaj, Počitelj, the Neretva) → <a href="dubrovnik.html">Dubrovnik</a> (walls, Srđ) → <a href="kotor.html">Kotor</a> Bay, Perast and <a href="lovcen.html">Lovćen</a> → Podgorica out. Bosnia gets the heart of the trip, then the coast and the bay. Same gateways, opposite balance to route 1.</li>
+      <li><b>3 · Croatia → Bosnia &amp; Herzegovina → Montenegro — Split, Mostar, Sarajevo, then the bay</b> — in <a href="zagreb.html">Zagreb</a>, out Podgorica (TGD). Zagreb → <a href="split.html">Split</a> (the palace, Marjan, an island day) → <a href="mostar.html">Mostar</a> (Stari Most, Blagaj, Počitelj) → <a href="sarajevo.html">Sarajevo</a> (Baščaršija, the Tunnel of Hope, Vrelo Bosne) → <a href="kotor.html">Kotor</a> Bay, Perast and <a href="lovcen.html">Lovćen</a> → <a href="budva-riviera.html">Budva Riviera</a> (Sveti Stefan) → Podgorica for the flight. The one route that doubles inland to Sarajevo before dropping back to the coast: more moving, but Sarajevo gets a night rather than a day trip.</li>
     </ul>
-    <p>That's the shortlist: two orders, both with Zagreb as the entry and Podgorica as the exit, each visiting all three countries in one southbound line. <strong>What separates them is the split of nights</strong> — coast-heavy in route 1, Bosnia-heavy in route 2 — and the Bosnia deck still has no numbers in its budget slide. Once one is chosen, the day-by-day gets rebuilt around the same principles.</p>
+    <p>That's the shortlist: three orders, all with Zagreb as the entry and Podgorica as the exit, each visiting all three countries. <strong>What separates them is the split of nights</strong> — coast-heavy in route 1, Bosnia-heavy in route 2, and a Sarajevo overnight in route 3 — and the Bosnia deck still has no numbers in its budget slide. Once one is chosen, the day-by-day gets rebuilt around the same principles.</p>
   </section>
 
   <section class="sec">
@@ -154,8 +157,10 @@
     <label class="route-chip" for="route-1" style="--chip:#b3206f" title="Draw route 1">1</label>
     <input class="route-radio" type="radio" name="routeopt" id="route-2" aria-label="Draw route 2">
     <label class="route-chip" for="route-2" style="--chip:#0f7b8a" title="Draw route 2">2</label>
+    <input class="route-radio" type="radio" name="routeopt" id="route-3" aria-label="Draw route 3">
+    <label class="route-chip" for="route-3" style="--chip:#6d4fa3" title="Draw route 3">3</label>
     <figure class="map-frame">
-      <svg class="route-svg" viewBox="0 0 700 676" role="img" aria-label="Geographically accurate map of Croatia, Bosnia and Herzegovina and Montenegro, projected from real coordinates: the twelve numbered stops sit at their real positions along the Adriatic coast and inland — navy circles for cities and towns, magenta circles for sites and places to see, with dashed day-trip branches and the three country outlines. In the route view, choosing 1 or 2 draws that one Zagreb-to-Podgorica order across the same map.">
+      <svg class="route-svg" viewBox="0 0 700 676" role="img" aria-label="Geographically accurate map of Croatia, Bosnia and Herzegovina and Montenegro, projected from real coordinates: the twelve numbered stops sit at their real positions along the Adriatic coast and inland — navy circles for cities and towns, magenta circles for sites and places to see, with dashed day-trip branches and the three country outlines. In the route view, choosing 1, 2 or 3 draws that one Zagreb-to-Podgorica order across the same map.">
         <defs>
           <linearGradient id="seaGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bdd8e5"/><stop offset="1" stop-color="#a9cbdc"/></linearGradient>
           <linearGradient id="landGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6f7f2"/><stop offset="1" stop-color="#e9ece3"/></linearGradient>
@@ -192,7 +197,7 @@
         <ellipse cx="579.2" cy="610.6" rx="30" ry="17" transform="rotate(-18 579.2 610.6)" fill="#bdd8e5" stroke="#ffffff" stroke-width="1.6" opacity="0.95"/>
         <text x="579.2" y="614.6" text-anchor="middle" class="dot-label" style="font-size:11px;">Lake Skadar</text>
 
-        <!-- Route layer: two orders, both Zagreb in / Podgorica out -->
+        <!-- Route layer: three orders, all Zagreb in / Podgorica out -->
         <g class="layer-routes">
           <g class="route-opt r1">
             <g fill="none" stroke="#ffffff" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" opacity="0.9">
@@ -208,6 +213,14 @@
             </g>
             <g fill="none" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round">
               <polyline class="route-line" pathLength="100" points="262.0,126.0 495.1,387.1 437.7,456.3 464.5,547.9 529.4,578.0 576.6,575.7" stroke="#0f7b8a"/>
+            </g>
+          </g>
+          <g class="route-opt r3">
+            <g fill="none" stroke="#ffffff" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" opacity="0.9">
+              <polyline class="route-line" pathLength="100" points="262.0,126.0 305.9,433.6 437.7,456.3 495.1,387.1 529.4,578.0 540.9,600.5 576.6,575.7"/>
+            </g>
+            <g fill="none" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round">
+              <polyline class="route-line" pathLength="100" points="262.0,126.0 305.9,433.6 437.7,456.3 495.1,387.1 529.4,578.0 540.9,600.5 576.6,575.7" stroke="#6d4fa3"/>
             </g>
           </g>
         </g>
@@ -267,7 +280,7 @@
         </g>
         </g>
       </svg>
-      <figcaption><strong>Two views, one map.</strong> Switch above between the numbered stops and the route options; the country outlines and coordinates are the same in both. In the stops view, drawn from real coordinates: the three country outlines and all twelve stops are projected from their mapped positions, so the bay bends where it bends and the lake sits inland behind the coast. Stop numbers follow the field-notes index (the gaps are places from countries we didn't choose); every circle is clickable and opens its field-notes page. Navy circles are cities and towns; magenta circles are sites and places to see. On a phone the chart shrinks to fit the page — pinch to zoom in. In the route view, nothing is drawn until you click a number: that order's line is then sketched across the same map, joining the gateway cities in the order it travels. The numbered stops stay visible underneath, so you can see which places each order threads through; the selected chip and the highlighted key entry tell you which order you are looking at. Only one of the two shows at a time; click the other number, or Clear, to swap it. It is a diagram of the choice, not a road map.</figcaption>
+      <figcaption><strong>Two views, one map.</strong> Switch above between the numbered stops and the route options; the country outlines and coordinates are the same in both. In the stops view, drawn from real coordinates: the three country outlines and all twelve stops are projected from their mapped positions, so the bay bends where it bends and the lake sits inland behind the coast. Stop numbers follow the field-notes index (the gaps are places from countries we didn't choose); every circle is clickable and opens its field-notes page. Navy circles are cities and towns; magenta circles are sites and places to see. On a phone the chart shrinks to fit the page — pinch to zoom in. In the route view, nothing is drawn until you click a number: that order's line is then sketched across the same map, joining the gateway cities in the order it travels. The numbered stops stay visible underneath, so you can see which places each order threads through; the selected chip and the highlighted key entry tell you which order you are looking at. Only one of the three shows at a time; click another number, or Clear, to swap it. It is a diagram of the choice, not a road map.</figcaption>
     </figure>
     <div class="map-legend">
       <span class="key"><span class="k-num">n</span> Cities &amp; towns — numbered, click for its page</span>
@@ -278,6 +291,7 @@
     <div class="route-key">
       <label class="rk1" for="route-1"><span class="rk-num" style="background:#b3206f">1</span><span><span class="rk-swatch" style="border-color:#b3206f"></span> Croatia → Bosnia → Montenegro — coast first, Bosnia in the middle<small>ZAG in · TGD out · 7 stops drawn</small></span></label>
       <label class="rk2" for="route-2"><span class="rk-num" style="background:#0f7b8a">2</span><span><span class="rk-swatch" style="border-color:#0f7b8a"></span> Bosnia → Croatia → Montenegro — inland first, then the coast<small>ZAG in · TGD out · 6 stops drawn</small></span></label>
+      <label class="rk3" for="route-3"><span class="rk-num" style="background:#6d4fa3">3</span><span><span class="rk-swatch" style="border-color:#6d4fa3"></span> Split → Mostar → Sarajevo → Kotor → Budva → Podgorica<small>ZAG in · TGD out · 7 stops drawn</small></span></label>
     </div>
     <div class="todo-row">
       <a href="split.html">1 · Split</a>
@@ -300,7 +314,7 @@
 
   <section class="sec">
     <h2>Bosnia: day trips, or a trip of its own</h2>
-    <p class="lede prose">Bosnia is in. The question is how — as day trips bolted onto a coastal route, or as the backbone of a Bosnia-first one (see the routes above). The day-trip options, ranked by how well they fit a relaxed trip:</p>
+    <p class="lede prose">Bosnia is in. The question is how — as day trips bolted onto a coastal route, as the backbone of a Bosnia-first one, or as an inland overnight between Mostar and the bay (see the routes above). The day-trip options, ranked by how well they fit a relaxed trip:</p>
     <div class="options">
       <div class="option best">
         <span class="tag">Best fit</span>
@@ -320,9 +334,9 @@
       </div>
     </div>
     <div class="callout">
-      <strong>Don't try to "do Mostar on the way"</strong> between Split and Dubrovnik in one day — you'd arrive with luggage at 7pm having seen the bridge for three rushed hours. Bosnia is in on both routes; the point is that Mostar gets a night, not a three-hour look between buses. Route 1 gives it a short chapter, route 2 gives it the heart of the trip.
+      <strong>Don't try to "do Mostar on the way"</strong> between Split and Dubrovnik in one day — you'd arrive with luggage at 7pm having seen the bridge for three rushed hours. Bosnia is in on all three routes; the point is that Mostar gets a night, not a three-hour look between buses. Route 1 gives it a short chapter, route 2 gives it the heart of the trip, and route 3 sleeps in both Mostar and Sarajevo.
     </div>
-    <p>Both routes give Bosnia real nights, so the deck's own 11-night plan is the detail to draw on: <strong>Sarajevo (4 nights) → Konjic &amp; Mostar (4) → Jajce (2) → Sarajevo (1)</strong> — Baščaršija and the Latin Bridge, the Tunnel of Hope and War Childhood museums, Vrelo Bosne's springs, the Stari Most and Kujundžiluk bazaar, Blagaj, Počitelj and the Kravica waterfalls, rafting on the Neretva, and the Fortica skywalk above Mostar — then its suggestion to extend south into Montenegro (Kotor Bay, Perast, Lovćen). Jajce is a loop north of Sarajevo, so it fits route 2's Bosnia-first shape better than route 1's shorter chapter. The deck's budget slide carries no numbers yet; those get filled in before the two routes can be compared properly.</p>
+    <p>All three routes give Bosnia real nights, so the deck's own 11-night plan is the detail to draw on: <strong>Sarajevo (4 nights) → Konjic &amp; Mostar (4) → Jajce (2) → Sarajevo (1)</strong> — Baščaršija and the Latin Bridge, the Tunnel of Hope and War Childhood museums, Vrelo Bosne's springs, the Stari Most and Kujundžiluk bazaar, Blagaj, Počitelj and the Kravica waterfalls, rafting on the Neretva, and the Fortica skywalk above Mostar — then its suggestion to extend south into Montenegro (Kotor Bay, Perast, Lovćen). Jajce is a loop north of Sarajevo, so it fits routes 2 and 3 better than route 1's shorter coastal chapter. The deck's budget slide carries no numbers yet; those get filled in before the three routes can be compared properly.</p>
   </section>
 
   <section class="sec">
@@ -347,7 +361,7 @@
   <footer class="colophon">
     <div class="pager">
       <a href="things-to-do.html">Field notes by place</a>
-      <span class="lab">Balkans 2027 · the two routes</span>
+      <span class="lab">Balkans 2027 · the three routes</span>
       <a href="flights-visa.html">Flights &amp; visas →</a>
     </div>
     <p class="proof">Prepared for the group · every main city numbered on the map above · pins from the shared map list</p>
